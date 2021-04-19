@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.JiangTao.model.User" %><%--
   Created by IntelliJ IDEA.
   User: 拾光
   Date: 2021/4/12
@@ -12,16 +12,17 @@
 <head>
     <title>Title</title>
 </head>
+<%User user=new User()%>
 <body>
 <h3>
     User Info
 </h3>
 <table >
-    <tr><td>Username:</td><td><%=request.getAttribute("username")%></td></tr>
-    <tr><td>Password:</td><td><%=request.getAttribute("password")%></td></tr>
-    <tr><td>gender:</td><td><%=request.getAttribute("gender")%></td></tr>
-    <tr><td>phone:</td><td><%=request.getAttribute("phone")%></td></tr>
-    <tr><td>email:</td><td><%=request.getAttribute("email")%></td></tr>
+    <tr><td>Username:</td><td><%=user.getId()%></td></tr>
+    <tr><td>Password:</td><td><%=user.getPassword()%></td></tr>
+    <tr><td>Gender:</td><td><%=user.getGender()%></td></tr>
+    <tr><td>Email:</td><td><%=user.getEmail()%></td></tr>
+    <tr><td>Birthdate:</td><td><%=user.getBirthdate()%></td></tr>
 </table>
 </body>
 </html>

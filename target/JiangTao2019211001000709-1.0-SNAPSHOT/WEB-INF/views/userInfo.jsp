@@ -12,13 +12,13 @@
 <head>
     <title>Title</title>
 </head>
-<%User user=new User();%>
+<%User user= (User) request.getAttribute("user");%>
 <body>
 <h3>
     User Info
 </h3>
 <table >
-    <tr><td>Username:</td><td><%=user.getId()%></td></tr>
+    <tr><td>Username:</td><td><%=user.getUsername()%></td></tr>
     <tr><td>Password:</td><td><%=user.getPassword()%></td></tr>
     <tr><td>Gender:</td><td><%=user.getGender()%></td></tr>
     <tr><td>Email:</td><td><%=user.getEmail()%></td></tr>

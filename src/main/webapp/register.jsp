@@ -42,8 +42,8 @@
                 <input type="radio" name="uSex" value="Female" /> Female
             </td>
         </tr>
-        <tr><td class="right">Telephone: </td><td><input type="number" name="uPhone"/></td></tr>
         <tr><td class="right">Email: </td><td><input type="email" name="uEmail"/></td></tr>
+        <tr><td class="right">Birthdate: </td><td><input type="date" name="uDate"/></td></tr>
         <tr><td></td><td><input type="submit" value="Register" onclick="return restriction()">  <input type="reset" value="Reset"></td>  </tr>
 
     </table>
