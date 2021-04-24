@@ -12,7 +12,7 @@
 <head>
     <title>Title</title>
 </head>
-<%User user=new User();%>
+<%User user=(User) session.getAttribute("user");%>
 <body>
 <h3>
     User Info

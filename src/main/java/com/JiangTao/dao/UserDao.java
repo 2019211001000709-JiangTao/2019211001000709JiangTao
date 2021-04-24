@@ -35,7 +35,7 @@ public class UserDao implements IUserDao{
 
     @Override
     public int updateUser(Connection con, User user) throws SQLException {
-        String sql="update userTable set userName=?,password=?, gender=?, email=?,birthday=? where id=?";
+        String sql="update userTable set userName=?,password=?, gender=?, email=?,birthdate=? where id=?";
         PreparedStatement pstmt=con.prepareStatement(sql);
         pstmt.setString(1, user.getUsername());
         pstmt.setString(2, user.getPassword());
@@ -49,7 +49,7 @@ public class UserDao implements IUserDao{
 
     @Override
     public User findById(Connection con, Integer id) throws SQLException {
-        String sql="delete from userTable where id=?";
+        String sql="select * from userTable where id=?";
         PreparedStatement pstmt=con.prepareStatement(sql);
         pstmt.setInt(1, id.intValue());
         ResultSet rs=pstmt.executeQuery();
