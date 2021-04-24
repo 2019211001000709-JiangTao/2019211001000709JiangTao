@@ -19,20 +19,44 @@
         out.println("<h4>"+request.getAttribute("message")+"</h4>");
     }
 %>
+<%
+    Cookie[] allCookies=request.getCookies();
+    String username = "",password = "",rememberMeval = "";
+    if(allCookies != null){
+        for(Cookie c:allCookies){
+            if(c.getName().equals("cUsername")){
+                username=c.getValue();
+            }
+            if(c.getName().equals("cPassword")){
+                password=c.getValue();
+            }
+            if(c.getName().equals("cRememberMe")){
+                rememberMeval=c.getValue();
+            }
+        }
+    }
+%>
     <form action="login" method="post">
         <table>
-            <tr> <td class="right">Username: </td>
-                <td><input type="text" id="username" name="inName"/></td>
+            <tr>
+                <td class="right">Username: </td>
+                <td><input type="text" id="username" name="inName" value="<%=username%>"/></td>
             </tr>
-            <tr> <td class="right">Password: </td>
-                <td><input type="password" id="password" style="ime-mode:disabled" name="inPwd" /></td>
+
+            <tr>
+                <td class="right">Password: </td>
+                <td><input type="password" id="password" style="ime-mode:disabled" name="inPwd" value="<%=password%>"/></td>
             </tr>
-            <tr><td></td>
+
+            <tr>
+                <td></td>
                 <td>
+                    <input type="checkbox" name="rememberMe" value="1" <%=rememberMeval.equals("1") ?"checked":" " %>/>RememberMe</br>
                     <input type="submit" value="login" onClick="return validateLogin()">
                     <input type="reset" value="Reset">
                 </td>
             </tr>
+
         </table>
     </form>
 <script language="javascript">

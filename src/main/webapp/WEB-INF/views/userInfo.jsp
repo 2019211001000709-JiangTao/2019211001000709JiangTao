@@ -12,7 +12,7 @@
 <head>
     <title>Title</title>
 </head>
-<%User user= (User) request.getAttribute("user");%>
+<%User user= (User) session.getAttribute("user");%>
 <body>
 <h3>
     User Info
@@ -23,6 +23,8 @@
     <tr><td>Gender:</td><td><%=user.getGender()%></td></tr>
     <tr><td>Email:</td><td><%=user.getEmail()%></td></tr>
     <tr><td>Birthdate:</td><td><%=user.getBirthdate()%></td></tr>
+    <tr><td><a href="updateUser">Update User</a></td></tr>
+
 </table>
 </body>
 </html>
