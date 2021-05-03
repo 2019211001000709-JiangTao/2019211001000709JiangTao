@@ -51,7 +51,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <input type="checkbox" name="rememberMe" value="1" <%=rememberMeval.equals("1") ?"checked":" " %>/>RememberMe</br>
+                    <input type="checkbox" name="rememberMe" value="1" <%=rememberMeval.equals("1") ?"checked":"" %>/>RememberMe</br>
                     <input type="submit" value="login" onClick="return validateLogin()">
                     <input type="reset" value="Reset">
                 </td>
