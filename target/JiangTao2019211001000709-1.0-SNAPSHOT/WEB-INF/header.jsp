@@ -52,7 +52,7 @@
          <td align="right">
              <br><a href="#">Logout</a>
              <br><a href="#">My Cart</a><br/>
-             <a href="register.jsp">Register Here</a>
+             <a href="views/register.jsp">Register Here</a>
          </td>
      </tr>
  </table>
