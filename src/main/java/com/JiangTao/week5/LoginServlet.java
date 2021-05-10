@@ -31,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 
         String inUsername=request.getParameter("inName");
         String inPassword=request.getParameter("inPwd");
+        System.out.println(inUsername+inPassword);
         try {
             User user=userDao.findByUsernamePassword(con,inUsername,inPassword);
             System.out.println(user);
