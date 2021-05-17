@@ -9,6 +9,7 @@ public class User {
     private String gender;
     private String email;
     private Date birthdate;
+    public User(){}
 
     public int getId() {
         return id;
