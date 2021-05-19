@@ -4,14 +4,11 @@ import java.io.InputStream;
 
 public class Product {
     private int productId;
-    private  String ProductName;
-    private String ProductDescription;
+    private  String productName;
+    private String productDescription;
     private InputStream picture;
     double price;
-    private int CategoryId;
-
-    public Product() {
-    }
+    private int categoryId;
 
     public int getProductId() {
         return productId;
@@ -22,19 +19,19 @@ public class Product {
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getProductDescription() {
-        return ProductDescription;
+        return productDescription;
     }
 
     public void setProductDescription(String productDescription) {
-        ProductDescription = productDescription;
+        this.productDescription = productDescription;
     }
 
     public InputStream getPicture() {
@@ -54,22 +51,22 @@ public class Product {
     }
 
     public int getCategoryId() {
-        return CategoryId;
+        return categoryId;
     }
 
     public void setCategoryId(int categoryId) {
-        CategoryId = categoryId;
+        this.categoryId = categoryId;
     }
 
     @Override
     public String toString() {
         return "Product{" +
                 "productId=" + productId +
-                ", ProductName='" + ProductName + '\'' +
-                ", ProductDescription='" + ProductDescription + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productDescription='" + productDescription + '\'' +
                 ", picture=" + picture +
                 ", price=" + price +
-                ", CategoryId=" + CategoryId +
+                ", categoryId=" + categoryId +
                 '}';
     }
 }
