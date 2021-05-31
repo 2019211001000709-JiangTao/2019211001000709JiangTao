@@ -1,7 +1,17 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../header.jsp"%>
-
+<script language="javascript">
+	function restriction(){
+		var pwd = document.getElementById("categoryId").value
+		if(pwd == 0){
+			alert("Please select product category!");
+			return false;
+		}
+		else
+			return true;
+	}
+</script>
 <div id="contact-page" class="container">
 <div class="row">  	
 <div class="col-sm-2">
@@ -27,12 +37,10 @@
 				                <input type="text" name="price" class="form-control" required="required" placeholder="Price">
 				            </div>
 				            <div class="form-group col-md-6">
-				               	<select name="categoryId">
-										<option >-- Category --</option>
+				               	<select name="categoryId" id="categoryId">
+										<option value="0">-- Category --</option>
 											<!-- loop_start -->
-											
-										<option value=""></option>
-										
+
 									<option value="1">FASHION</option>
 									<option value="2">HOUSEHOLD</option>
 									<option value="3">INTERIORS</option>
@@ -53,7 +61,7 @@
 				                <textarea name="productDescription" id="message"  class="form-control" cols="8" rows="8" placeholder="Product Description Here"></textarea>
 				            </div>                        
 				            <div class="form-group col-md-12">
-				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit" onclick="return restriction()">
 				            </div>
 				        </form>
 	    			</div>

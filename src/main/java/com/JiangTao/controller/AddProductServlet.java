@@ -35,6 +35,9 @@ public class AddProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String productName=request.getParameter("productName");
         Double price =request.getParameter("price") !=null? Double.parseDouble(request.getParameter("price")) : 0.0;
+
+
+
         int categoryId =request.getParameter("categoryId") !=null? Integer.parseInt(request.getParameter("categoryId")) : 0;
         String productDescription=request.getParameter("productDescription");
 
