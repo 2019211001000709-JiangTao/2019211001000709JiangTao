@@ -31,7 +31,7 @@ if(request.getParameter("username").equals("admin") && request.getParameter("pas
             <c:param name="username" value="admin"/>
         </c:url>
         <%-- todo 4.use c:redirect to url= welcome.jsp?username=admin--%>
-        <c:redirect url="welcome.jsp?username=admin" />
+        <c:redirect url="${myurl}" />
     </c:when>
 
     <%-- todo 5. use c:otherwise --%>
