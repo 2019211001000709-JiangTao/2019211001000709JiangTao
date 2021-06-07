@@ -68,7 +68,7 @@ public class OrderDao implements IOrderDao {
 				Set<Item> orderDetails =order.getOrderDetails();
 				//OrderDetailsDao odDao=new OrderDetailsDao();
 				Iterator<Item> i=orderDetails.iterator();
-				String sql1="INSERT INTO orderdetail(OrderID,ProductID,price,Quantity,Total) values(?,?,?,?,?)";
+				String sql1="INSERT INTO orderdetail(OrderID,ProductI D,price,Quantity,Total) values(?,?,?,?,?)";
 				PreparedStatement st1 = con.prepareStatement(sql1);
 				while(i.hasNext()){
 					Item item= i.next();
