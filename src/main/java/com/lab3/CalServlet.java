@@ -7,16 +7,10 @@ import java.io.IOException;
 
 @WebServlet(name = "CalServlet", value = "/lab3/CalServlet")
 public class CalServlet extends HttpServlet {
-    int firstVal(int a){
-        return a;
-    }
-    int secondVal(int b){
-        return  b;
-    }
+
     int add(int a,int b){
         return  a+b;
     }
-
     int subtract(int a,int b){
         return a-b;
     }
