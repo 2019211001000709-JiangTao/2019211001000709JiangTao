@@ -29,22 +29,6 @@ public class CalServlet extends HttpServlet {
     int computeLength(String str) {
         return str.length();
     }
-    public static boolean isNumeric(String str){
-        for (int i = 0; i < str.length(); i++){
-            if (!Character.isDigit(str.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
-    public static boolean isName(String str){
-        for (int i = 0; i < str.length(); i++){
-            if (Character.isDigit(str.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
